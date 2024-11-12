@@ -1,1 +1,36 @@
-<p>list-product works!</p>
+<!-- <p>list-product works!</p> -->
+
+<div class="container">
+    <h2 align="center">List of products</h2>
+  </div>
+  <div class="container">
+  
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Category</th>
+          <th scope="col">Name</th>
+          <th scope="col">Price</th>
+          <th scope="col">Delete</th>
+         <!-- <th scope="col">Update</th> -->
+  
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let p of products" >
+          <th scope="row">{{p.id}}</th>
+          <td>{{p.category}}</td>
+          <td>{{p.name}}</td>
+          <td>{{p.price}}</td>
+          <td>
+            <button class="btn btn-danger" (click)="delete(p.id)">Delete</button>
+          </td>
+         <!-- <td>
+            <button class="btn btn-success" (click)="update(p.id)">Update</button>
+          </td> -->
+        </tr>
+      </tbody>
+    </table>
+  
+  </div>
